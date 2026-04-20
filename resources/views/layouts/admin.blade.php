@@ -159,6 +159,9 @@
                     <a href="{{ route('admin.feedbacks.index') }}" class="flex items-center gap-3 px-4 py-3 text-sm font-semibold text-slate-400 rounded-lg hover:bg-slate-800 {{ request()->routeIs('admin.feedbacks.*') ? 'sidebar-active' : '' }}">
                         <i data-lucide="message-square" class="w-4 h-4"></i> Feedback
                     </a>
+                    <a href="{{ route('admin.updates.index') }}" class="flex items-center gap-3 px-4 py-3 text-sm font-semibold text-slate-400 rounded-lg hover:bg-slate-800 {{ request()->routeIs('admin.updates.*') ? 'sidebar-active' : '' }}">
+                        <i data-lucide="refresh-cw" class="w-4 h-4"></i> Update Sistem
+                    </a>
                     <a href="{{ route('admin.backups.index') }}" class="flex items-center gap-3 px-4 py-3 text-sm font-semibold text-slate-400 rounded-lg hover:bg-slate-800 {{ request()->routeIs('admin.backups.*') ? 'sidebar-active' : '' }}">
                         <i data-lucide="database-backup" class="w-4 h-4"></i> Manajemen Backup
                     </a>
