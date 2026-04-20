@@ -1,0 +1,15 @@
+<?php
+
+namespace App\Http\Controllers\Admin;
+
+use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
+
+class GuideController extends Controller
+{
+    public function index()
+    {
+        $role = auth()->user()->role->name ?? 'guest';
+        return view('admin.guides.index', compact('role'));
+    }
+}

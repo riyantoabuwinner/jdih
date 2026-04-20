@@ -152,12 +152,17 @@
                     <i data-lucide="activity" class="w-4 h-4"></i> Log Audit
                 </a>
                 <p class="px-4 mt-8 text-[10px] uppercase text-slate-500 font-black mb-3 tracking-widest">Support</p>
-                <a href="{{ route('admin.feedbacks.index') }}" class="flex items-center gap-3 px-4 py-3 text-sm font-semibold text-slate-400 rounded-lg hover:bg-slate-800 {{ request()->routeIs('admin.feedbacks.*') ? 'sidebar-active' : '' }}">
-                    <i data-lucide="message-square" class="w-4 h-4"></i> Feedback
-                </a>
-                <a href="{{ route('admin.backups.index') }}" class="flex items-center gap-3 px-4 py-3 text-sm font-semibold text-slate-400 rounded-lg hover:bg-slate-800 {{ request()->routeIs('admin.backups.*') ? 'sidebar-active' : '' }}">
-                    <i data-lucide="database-backup" class="w-4 h-4"></i> Manajemen Backup
-                </a>
+                <div class="space-y-0.5">
+                    <a href="{{ route('admin.guides.index') }}" class="flex items-center gap-3 px-4 py-3 text-sm font-semibold text-slate-400 rounded-lg hover:bg-slate-800 {{ request()->routeIs('admin.guides.*') ? 'sidebar-active' : '' }}">
+                        <i data-lucide="book-open" class="w-4 h-4"></i> Panduan Aplikasi
+                    </a>
+                    <a href="{{ route('admin.feedbacks.index') }}" class="flex items-center gap-3 px-4 py-3 text-sm font-semibold text-slate-400 rounded-lg hover:bg-slate-800 {{ request()->routeIs('admin.feedbacks.*') ? 'sidebar-active' : '' }}">
+                        <i data-lucide="message-square" class="w-4 h-4"></i> Feedback
+                    </a>
+                    <a href="{{ route('admin.backups.index') }}" class="flex items-center gap-3 px-4 py-3 text-sm font-semibold text-slate-400 rounded-lg hover:bg-slate-800 {{ request()->routeIs('admin.backups.*') ? 'sidebar-active' : '' }}">
+                        <i data-lucide="database-backup" class="w-4 h-4"></i> Manajemen Backup
+                    </a>
+                </div>
                 @endif
             </div>
 

@@ -47,7 +47,8 @@ Route::middleware(['auth', 'verified'])->prefix('admin')->name('admin.')->group(
     Route::post('settings', [\App\Http\Controllers\Admin\SettingController::class, 'update'])->name('settings.update');
 
     Route::resource('faqs', \App\Http\Controllers\Admin\FAQController::class);
-    Route::get('feedbacks', [\App\Http\Controllers\Admin\FeedbackController::class, 'index'])->name('feedbacks.index');
+    Route::get('/feedbacks', [\App\Http\Controllers\Admin\FeedbackController::class, 'index'])->name('feedbacks.index');
+    Route::get('/guides', [\App\Http\Controllers\Admin\GuideController::class, 'index'])->name('guides.index');
     Route::delete('feedbacks/{feedback}', [\App\Http\Controllers\Admin\FeedbackController::class, 'destroy'])->name('feedbacks.destroy');
 
     Route::post('impersonate/{user}', [\App\Http\Controllers\Admin\ImpersonateController::class, 'impersonate'])->name('impersonate.start');
